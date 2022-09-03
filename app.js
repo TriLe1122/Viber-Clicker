@@ -65,7 +65,7 @@ function buyUpgrade(name) {
     totalVibes -= boughtUpgrade.cost
     boughtUpgrade.quantity++
     // @ts-ignore
-    boughtUpgrade.cost *= (1.5).toFixed(0)
+    boughtUpgrade.cost += Math.floor(1.8)
 
     if (boughtUpgrade.type == "active") {
       petsPerClick += boughtUpgrade.multiplier
@@ -95,6 +95,11 @@ function update() {
   document.getElementById('activeUpgrade2').innerText = upgrades[1].quantity
   document.getElementById('passiveUpgrade1').innerText = upgrades[2].quantity
   document.getElementById('passiveUpgrade2').innerText = upgrades[3].quantity
+
+  document.getElementById('totalActiveUpgrade1').innerText = upgrades[0].cost
+  document.getElementById('totalActiveUpgrade2').innerText = upgrades[1].cost
+  document.getElementById('totalPassiveUpgrade1').innerText = upgrades[2].cost
+  document.getElementById('totalPassiveUpgrade2').innerText = upgrades[3].cost
 
 
 }

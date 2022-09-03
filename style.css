@@ -1,5 +1,7 @@
 body {
-  background-image: url(https://c.tenor.com/TUN36wlxyhMAAAAC/aesthetic-raining.gif);
+  /* background-image: url(https://c.tenor.com/TUN36wlxyhMAAAAC/aesthetic-raining.gif); */
+  /* background-image: url(https://pbs.twimg.com/media/DbzpBHtW4AAC5RC?format=jpg&name=4096x4096); */
+  background-image: url(https://wallpapercave.com/wp/wp10513527.gif);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -13,12 +15,16 @@ body {
 
 }
 
+.loficat:active {
+  transform: scale(.95);
+}
+
 .progress-bar {
   align-items: baseline;
 }
 
 .neonText {
-  animation: flicker 1.5s infinite alternate;
+  animation: flicker 4.5s infinite alternate;
   color: #fff;
 }
 
@@ -36,6 +42,9 @@ h1 {
 
 }
 
+.music {
+  background-image: url(https://media2.giphy.com/media/hVfj148Hsqfn7aXu5j/giphy.gif?cid=790b76111cb16ae54b41488d5f90e9ff4d1b64606409e0cc&rid=giphy.gif&ct=s);
+}
 
 /* Flickering animation */
 @keyframes flicker {

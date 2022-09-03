@@ -35,18 +35,18 @@
 
 <body class="">
 
-
-  <header class="container">
-    <h3 class="row justify-content-center neonText mt-4 ">
-      Collect The Lofi Vibes
-    </h3>
-  </header>
-
+  <div>
+    <header class="container">
+      <h3 class="row justify-content-center neonText mt-4 ">
+        Collect The Lofi Vibes
+      </h3>
+    </header>
+  </div>
 
   <!-- SECTION lofi cat img -->
   <section class="container">
     <div class="row justify-content-center">
-      <div class="col-6">
+      <div class="col-6 music" id="music">
         <img class="loficat "
           src="https://64.media.tumblr.com/a71bc83661d3be8192c7d6cd62e2e966/tumblr_pa2knrX5Zz1xu0hh4o1_500.gif" alt=""
           onclick="pet()">
@@ -73,15 +73,19 @@
           <div class="col-6 ">
             <h6 class="text-center">Vibe Check Stats</h6>
             <div class="d-flex flex-column px-5 ">
-              <button class="btn btn-primary mb-2" onclick="buyUpgrade('smallVibe')">Small Vibe</button>
-              <button class="btn btn-success" onclick="buyUpgrade('majorVibe')">Major Vibe</button>
+              <button class="btn btn-primary mb-2" onclick="buyUpgrade('smallVibe')">Small Vibe<span
+                  id="totalActiveUpgrade1">x0</span></button>
+              <button class="btn btn-success" onclick="buyUpgrade('majorVibe')">Major Vibe<span
+                  id="totalActiveUpgrade2">x0</span></button>
             </div>
           </div>
           <div class="col-6 text-center">
             <h6>Chill Vibes Stats</h6>
             <div class="d-flex flex-column px-5 ">
-              <button class="btn btn-primary mb-2" onclick="buyUpgrade('chillVibe')">Chill</button>
-              <button class="btn btn-success" onclick="buyUpgrade('majorChillVibe')">Chill~</button>
+              <button class="btn btn-primary mb-2" onclick="buyUpgrade('chillVibe')">Chill Vibe<span
+                  id="totalPassiveUpgrade1">x0</span></button>
+              <button class="btn btn-success" onclick="buyUpgrade('majorChillVibe')">Major Chill
+                Vibe<span id="totalPassiveUpgrade2">x0</span></button>
             </div>
           </div>
         </div>
