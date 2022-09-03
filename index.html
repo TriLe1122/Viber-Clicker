@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
     integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
-  link
+
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
@@ -33,14 +33,13 @@
 
 
 
-<body class="debug">
+<body class="">
 
 
   <header class="container">
-    <h1 class="row justify-content-center neonText mt-4">
+    <h3 class="row justify-content-center  mt-4">
       Collect The Lofi Vibes
-    </h1>
-
+    </h3>
   </header>
 
 
@@ -49,7 +48,8 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <img class="loficat "
-          src="https://64.media.tumblr.com/a71bc83661d3be8192c7d6cd62e2e966/tumblr_pa2knrX5Zz1xu0hh4o1_500.gif" alt="">
+          src="https://64.media.tumblr.com/a71bc83661d3be8192c7d6cd62e2e966/tumblr_pa2knrX5Zz1xu0hh4o1_500.gif" alt=""
+          onclick="pet()">
       </div>
     </div>
   </section>
@@ -57,47 +57,49 @@
 
   <!-- SECTION onclick or passive vibes per click/sec -->
   <section class="container">
-    <div class="row justify-content-center ">
-      <div class="col-2 bg-primary "> lofi's per sec</div>
-      <div class="col-3 bg-primary fs-5 ">🎧</i>total lofi vibes</div>
-      <div class="col-2 bg-primary ">free vibes for vibing</div>
+    <div class="row justify-content-center text-center">
+      <div class="col-2 outline glass text-light mt-3"> lofi's per pet <b><span id="pets-per-click">0</span></b></div>
+      <div class="col-3 outline glass text-light fs-5 ">🎧</i>total lofi vibes <b><span id="total-vibes">0</span></b>
+      </div>
+      <div class="col-2 outline glass text-light mt-3">free vibes for vibing <b><span id="passive-vibes-ps">0</span></b>
+      </div>
     </div>
 
 
     <!-- SECTION clickable upgrades  -->
     <div class="row  text-light  ">
-      <div class="col-5 text-light bg-dark">
+      <div class="col-5 text-light outline glass">
         <div class="row">
-          <div class="col-6">
+          <div class="col-6 ">
             <h6 class="text-center">Vibe Check Stats</h6>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
+            <div class="d-flex flex-column px-5 ">
+              <button class="btn btn-primary mb-2" onclick="buyUpgrade('smallVibe')">Small Vibe</button>
+              <button class="btn btn-success" onclick="buyUpgrade('majorVibe')">Major Vibe</button>
+            </div>
           </div>
-          <div class="col-6">
+          <div class="col-6 text-center">
             <h6>Chill Vibes Stats</h6>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
+            <div class="d-flex flex-column px-5 ">
+              <button class="btn btn-primary mb-2" onclick="buyUpgrade('chillVibe')">Chill</button>
+              <button class="btn btn-success" onclick="buyUpgrade('majorChillVibe')">Chill~</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-2">
+      <div class="col-2 text-center">
         <h6>total vibes</h6>
       </div>
-      <div class="col-5 text-light bg-dark">
+      <div class="col-5 text-light outline glass">
         <div class="row">
           <div class="col-6">
             <h6 class="text-center">Vibe Check Stats</h6>
-            <p>1</p>
+            <span>Total </span>
             <p>2</p>
-            <p>3</p>
           </div>
           <div class="col-6">
             <h6>Chill Vibes Stats</h6>
             <p>1</p>
             <p>2</p>
-            <p>3</p>
           </div>
         </div>
       </div>
@@ -105,7 +107,7 @@
   </section>
 
 
-  <source src="app.js" type="">
+  <script src="app.js"></script>
 </body>
 
 </html>
