@@ -27,14 +27,14 @@ const upgrades = [
     type: "passive",
     cost: 10,
     quantity: 0,
-    multiplier: 5
+    multiplier: 10
   },
   {
     name: "majorChillVibe",
     type: "passive",
     cost: 200,
     quantity: 0,
-    multiplier: 50
+    multiplier: 100
   },
 ]
 
