@@ -13,19 +13,19 @@ const upgrades = [
     type: "active",
     cost: 10,
     quantity: 0,
-    multiplier: 1
+    multiplier: 5
   },
   {
     name: "majorVibe",
     type: "active",
     cost: 100,
     quantity: 0,
-    multiplier: 10
+    multiplier: 50
   },
   {
     name: "chillVibe",
     type: "passive",
-    cost: 100,
+    cost: 10,
     quantity: 0,
     multiplier: 5
   },
@@ -34,7 +34,7 @@ const upgrades = [
     type: "passive",
     cost: 200,
     quantity: 0,
-    multiplier: 20
+    multiplier: 50
   },
 ]
 
@@ -47,6 +47,7 @@ function pet() {
   update()
 }
 
+// NOTE VV activates only when i have bought this upgrade
 function passiveVibes() {
   totalVibes += passiveVibesPS
 
@@ -65,8 +66,7 @@ function buyUpgrade(name) {
     totalVibes -= boughtUpgrade.cost
     boughtUpgrade.quantity++
     // @ts-ignore
-    boughtUpgrade.cost += Math.floor(1.8)
-
+    boughtUpgrade.cost += boughtUpgrade.quantity * 75
     if (boughtUpgrade.type == "active") {
       petsPerClick += boughtUpgrade.multiplier
     } else {
@@ -77,25 +77,24 @@ function buyUpgrade(name) {
   update()
 }
 
-
+// NOTE passive vibes collection needs to happen every 3 seconds, after having bought the right upgrade
 setInterval(passiveVibes, 3000)
 
 
 
-
+// NOTE updates the information to the screen
 function update() {
   // @ts-ignore
   document.getElementById('passive-vibes-ps').innerText = passiveVibesPS
   // @ts-ignore
   document.getElementById('total-vibes').innerText = totalVibes
-  // @ts-ignore
+  // NOTE thhese are howq many of each upgrade i have bought
   document.getElementById('pets-per-click').innerText = petsPerClick
-
   document.getElementById('activeUpgrade1').innerText = upgrades[0].quantity
   document.getElementById('activeUpgrade2').innerText = upgrades[1].quantity
   document.getElementById('passiveUpgrade1').innerText = upgrades[2].quantity
   document.getElementById('passiveUpgrade2').innerText = upgrades[3].quantity
-
+  // NOTE these r how much the upgrades cost, with the increased cost
   document.getElementById('totalActiveUpgrade1').innerText = upgrades[0].cost
   document.getElementById('totalActiveUpgrade2').innerText = upgrades[1].cost
   document.getElementById('totalPassiveUpgrade1').innerText = upgrades[2].cost
@@ -137,60 +136,6 @@ function update() {
 
 
 
-
-
-
-
-
-
-
-
-
-// function buyUpgrade(name) {
-//   const boughtUpgrade = upgrades.find(c => c.type == 'active')
-//   // @ts-ignore
-//   if (totalVibes >= boughtUpgrade.cost) {
-//     // @ts-ignore
-//     totalVibes -= boughtUpgrade.cost
-//     // @ts-ignore
-//     petsPerClick += boughtUpgrade.multiplier
-//     // @ts-ignore
-//     boughtUpgrade.quantity++
-//     // want quantity to go up by one this brings my clicking value/auto clicking value up
-
-//   }
-//   update()
-// }
-
-// function applyUpgrade(name) {
-//   const applyUpgrade = upgrades.find(c => c.type == 'passive')
-//   // @ts-ignore
-//   if (totalVibes >= applyUpgrade.cost) {
-//     // @ts-ignore
-//     totalVibes -= applyUpgrade.cost
-//     // @ts-ignore
-//     totalVibes += applyUpgrade.multiplier
-//     // @ts-ignore
-//     passiveVibesPS += applyUpgrade.multiplier
-//     // @ts-ignore
-//     applyUpgrade.quantity++
-//   }
-//   console.log('TEST');
-//   update()
-// }
-// // TODO want the total quantity * multiplyers.
-// function collectApplyUpgrades() {
-//   const applyUpgrade = upgrades.find(c => c.type == 'passive')
-//   // @ts-ignore
-//   totalVibes += applyUpgrade.multiplier * applyUpgrade.quantity
-//   // @ts-ignore
-//   passiveVibesPS += applyUpgrade.multiplier
-//   console.log(passiveVibesPS);
-//   update()
-// }
-
-// setInterval(collectApplyUpgrades, 1000)
-// // setInterval(applyUpgrade, 1000)
 
 
 

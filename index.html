@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
     integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
@@ -37,8 +41,10 @@
 
   <div>
     <header class="container">
-      <h3 class="row justify-content-center neonText mt-4 ">
+
+      <h3 class="row justify-content-center neonText mt-4  ">
         Collect The Lofi Vibes
+
       </h3>
     </header>
   </div>
@@ -46,22 +52,26 @@
   <!-- SECTION lofi cat img -->
   <section class="container">
     <div class="row justify-content-center">
-      <div class="col-6 music" id="music">
+      <div class="col-6 music mx-5 me-5" id="music">
         <img class="loficat "
           src="https://64.media.tumblr.com/a71bc83661d3be8192c7d6cd62e2e966/tumblr_pa2knrX5Zz1xu0hh4o1_500.gif" alt=""
           onclick="pet()">
       </div>
+    </div>
     </div>
   </section>
 
 
   <!-- SECTION onclick or passive vibes per click/sec -->
   <section class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-2 outline glass text-light mt-3"> lofi's per pet <b><span id="pets-per-click">0</span></b></div>
-      <div class="col-3 outline glass text-light fs-5 ">🎧</i>total lofi vibes <b><span id="total-vibes">0</span></b>
+    <div class="row justify-content-center text-center mt-5 ">
+      <div class="col-2 outline glass text-light mt-3"> lofi's per pet <b><span class="neonText"
+            id="pets-per-click">0</span></b></div>
+      <div class="col-4 outline glass text-light fs-5 ">🎧</i>
+
       </div>
-      <div class="col-2 outline glass text-light mt-3">free vibes for vibing <b><span id="passive-vibes-ps">0</span></b>
+      <div class="col-2 outline glass text-light mt-3">free vibes for vibing <b><span class="neonText"
+            id="passive-vibes-ps">0</span></b>
       </div>
     </div>
 
@@ -72,26 +82,27 @@
         <div class="row">
           <div class="col-6 ">
             <h6 class="text-center">Vibe Check Stats</h6>
-            <div class="d-flex flex-column px-5 ">
-              <button class="btn btn-primary mb-2" onclick="buyUpgrade('smallVibe')">Small Vibe<span
+            <div class="d-flex flex-column px-5 pushable">
+              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('smallVibe')">Small Vibe<span
                   id="totalActiveUpgrade1">x0</span></button>
-              <button class="btn btn-success" onclick="buyUpgrade('majorVibe')">Major Vibe<span
+              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('majorVibe')">Major Vibe<span
                   id="totalActiveUpgrade2">x0</span></button>
             </div>
           </div>
           <div class="col-6 text-center">
             <h6>Chill Vibes Stats</h6>
-            <div class="d-flex flex-column px-5 ">
-              <button class="btn btn-primary mb-2" onclick="buyUpgrade('chillVibe')">Chill Vibe<span
+            <div class="d-flex flex-column px-5  ">
+              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('chillVibe')">Chill Vibe<span
                   id="totalPassiveUpgrade1">x0</span></button>
-              <button class="btn btn-success" onclick="buyUpgrade('majorChillVibe')">Major Chill
+              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('majorChillVibe')">Major Chill
                 Vibe<span id="totalPassiveUpgrade2">x0</span></button>
             </div>
           </div>
         </div>
       </div>
       <div class="col-2 text-center">
-        <h6>total vibes</h6>
+        total lofi vibes <b><span class="neonText fs-1" id="total-vibes">0</span></b>
+
       </div>
       <div class="col-5 text-light outline glass">
         <div class="row">

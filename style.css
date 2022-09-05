@@ -1,3 +1,9 @@
+* {
+  user-select: none;
+  font-family: 'Silkscreen', cursive;
+}
+
+
 body {
   /* background-image: url(https://c.tenor.com/TUN36wlxyhMAAAAC/aesthetic-raining.gif); */
   /* background-image: url(https://pbs.twimg.com/media/DbzpBHtW4AAC5RC?format=jpg&name=4096x4096); */
@@ -5,6 +11,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
 
 
 .loficat {
@@ -23,31 +31,51 @@ body {
   align-items: baseline;
 }
 
+
+
+
 .neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+/* .neonText {
   animation: flicker 4.5s infinite alternate;
   color: #fff;
-}
+} */
 
 h1 {
   font-size: 4.2rem;
 }
 
 .outline {
-  border: rgba(73, 126, 108, 0.613) solid 3px;
+  border: #dddddd solid 1px;
   border-radius: 4%;
 }
 
 .glass {
-  background-color: rgba(73, 126, 108, 0.178);
+  /* background-color: rgba(73, 126, 108, 0.178); */
+  background-color: #5b85e670;
+  /* background-image: url(https://media4.giphy.com/media/sd02z8izkKGKNgnD3F/giphy.gif?cid=790b76112270740510bf0dc804b6071d743fa444229bf76d&rid=giphy.gif&ct=s); */
+  /* background-image: url(https://media2.giphy.com/media/1gP0UvJKH9Hqc4EJAa/giphy.gif?cid=ecf05e47hzov7tdr0wlsz5njj1485fkk6ac3t8auy57d9dtt&rid=giphy.gif&ct=s); */
+  background-position: center;
 
 }
 
-.music {
+/* .music {
   background-image: url(https://media2.giphy.com/media/hVfj148Hsqfn7aXu5j/giphy.gif?cid=790b76111cb16ae54b41488d5f90e9ff4d1b64606409e0cc&rid=giphy.gif&ct=s);
-}
+} */
 
 /* Flickering animation */
-@keyframes flicker {
+/* @keyframes flicker {
 
   0%,
   18%,
@@ -74,7 +102,7 @@ h1 {
   55% {
     text-shadow: none;
   }
-}
+} */
 
 /* 
 .border {
