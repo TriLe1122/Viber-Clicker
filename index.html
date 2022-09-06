@@ -41,10 +41,8 @@
 
   <div>
     <header class="container">
-
-      <h3 class="row justify-content-center neonText mt-4  ">
+      <h3 class="row justify-content-center neonText mt-3  ">
         Collect The Lofi Vibes
-
       </h3>
     </header>
   </div>
@@ -64,14 +62,18 @@
 
   <!-- SECTION onclick or passive vibes per click/sec -->
   <section class="container">
-    <div class="row justify-content-center text-center mt-5 ">
-      <div class="col-2 outline glass text-light mt-3"> lofi's per pet <b><span class="neonText"
-            id="pets-per-click">0</span></b></div>
-      <div class="col-4 outline glass text-light fs-5 ">🎧</i>
-
+    <div class="row justify-content-center text-center mt-4 ">
+      <div class="col-2 outline glass text-light mt-3"> vibes per pet
+        <div>
+          <b><span class="neonText" id="pets-per-click">0</span></b>
+        </div>
       </div>
-      <div class="col-2 outline glass text-light mt-3">free vibes for vibing <b><span class="neonText"
-            id="passive-vibes-ps">0</span></b>
+      <!-- <div class="col-4 outline glass text-light fs-5 ">🎧</i>
+      </div> -->
+      <div class="col-2 outline glass text-light mt-3">vibes for vibing
+        <div>
+          <b><span class="neonText" id="passive-vibes-ps">0</span></b>
+        </div>
       </div>
     </div>
 
@@ -81,38 +83,43 @@
       <div class="col-5 text-light outline glass">
         <div class="row">
           <div class="col-6 ">
-            <h6 class="text-center">Vibe Check Stats</h6>
+            <h6 class="text-center"></h6>
             <div class="d-flex flex-column px-5 pushable">
-              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('smallVibe')">Small Vibe<span
-                  id="totalActiveUpgrade1">x0</span></button>
-              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('majorVibe')">Major Vibe<span
-                  id="totalActiveUpgrade2">x0</span></button>
+              <p>click upgrades</p>
+              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('smallVibe')">Small Vibe <span
+                  id="totalActiveUpgrade1"></span></button>
+              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('majorVibe')">Major Vibe <span
+                  id="totalActiveUpgrade2"></span></button>
             </div>
           </div>
           <div class="col-6 text-center">
-            <h6>Chill Vibes Stats</h6>
+            <h6></h6>
             <div class="d-flex flex-column px-5  ">
-              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('chillVibe')">Chill Vibe<span
-                  id="totalPassiveUpgrade1">x0</span></button>
+              <p>chill upgrades</p>
+              <button class="btn btn-outline-light m-1" onclick="buyUpgrade('chillVibe')">Chill Vibe <span
+                  id="totalPassiveUpgrade1"></span></button>
               <button class="btn btn-outline-light m-1" onclick="buyUpgrade('majorChillVibe')">Major Chill
-                Vibe<span id="totalPassiveUpgrade2">x0</span></button>
+                Vibe <span id="totalPassiveUpgrade2"></span></button>
             </div>
           </div>
         </div>
       </div>
       <div class="col-2 text-center">
-        total lofi vibes <b><span class="neonText fs-1" id="total-vibes">0</span></b>
-
+        total lofi vibes
+        <div>
+          <b><span class="neonText fs-1" id="total-vibes">0</span></b>
+        </div>
       </div>
+      <!-- SECTION all the stats for how many i bought of each upgrade -->
       <div class="col-5 text-light outline glass">
         <div class="row">
           <div class="col-6">
-            <h6 class="text-center">Vibe Check Stats</h6>
+            <h6 class="text-end">Vibe Check Stats</h6>
             <span>Total Vibed:</span>
             <p>Small Vibed's:<span id="activeUpgrade1">0</span></p>
             <p>Major Vibed's:<span id="activeUpgrade2">0</span></p>
           </div>
-          <div class="col-6">
+          <div class="col-6 mt-4">
             <span>Chill Vibed:</span>
             <p>Chill Vibed's:<span id="passiveUpgrade1">0</span></p>
             <p>Major Chill Vibed's:<span id="passiveUpgrade2">0</span></p>
